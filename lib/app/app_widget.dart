@@ -10,8 +10,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.pink,
+          secondaryHeaderColor: Colors.amber,
+          fontFamily: 'Raleway',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                titleMedium: const TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'RobotoCondensed',
+                ),
+              ),
+          canvasColor: const Color.fromRGBO(255, 254, 220, 1)),
       home: const MyHomePage(),
     );
   }
