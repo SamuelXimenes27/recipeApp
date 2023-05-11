@@ -55,7 +55,7 @@ const mockData = [
   ),
 ];
 
-const dummyMeals = [
+const mockMeal = [
   Meal(
     id: 'm1',
     categories: ['c1', 'c2'],
