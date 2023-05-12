@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meals/app/screens/categories_meals_screen.dart';
 import 'package:meals/app/screens/meal_details.screen.dart';
+import 'package:meals/app/screens/tabs_screen.dart';
 import 'package:meals/app/utils/routes.dart';
-
-import 'screens/category_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -27,24 +26,10 @@ class MyApp extends StatelessWidget {
             ),
       ),
       routes: {
-        RoutesConst.home: (context) => const MyHomePage(),
+        RoutesConst.home: (context) => const TabsScreen(),
         RoutesConst.categoriesMeals: (context) => const CategoriesMealsScreen(),
         RoutesConst.mealDetails: (context) => const MealDetailsScreen(),
       },
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const CategoriesScreen();
   }
 }
