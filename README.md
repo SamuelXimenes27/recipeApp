@@ -1,16 +1,18 @@
-# meals
+# Recipe App 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
 
-A new Flutter project.
+# About the project
 
-## Getting Started
+App for share some recipes and showing by categories.
 
-This project is a starting point for a Flutter application.
+The application consists of a list of categories, you can access a category and select a meal to look the ingredients and see the step by step.
 
-A few resources to get you started if this is your first Flutter project:
+## Layout
+![Mobile 1](https://i.postimg.cc/Hxx0sJv9/Screenshot-1684254561.png) ![Mobile 2](https://i.postimg.cc/fySxmGN3/Screenshot-1684254568.png) ![Mobile 3](https://i.postimg.cc/wvGXt6S8/Screenshot-1684254577.png) ![Mobile 4](https://i.postimg.cc/d0nmYR60/Screenshot-1684254591.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Author
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Samuel Ximenes de Oliveira
+
+https://www.linkedin.com/in/samuelximenes27
+
