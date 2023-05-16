@@ -1,12 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:meals/app/data/mock_data.dart';
+import 'package:meals/app/models/meal.dart';
+import 'package:meals/app/models/settings.dart';
 import 'package:meals/app/screens/categories_meals_screen.dart';
 import 'package:meals/app/screens/meal_details.screen.dart';
 import 'package:meals/app/screens/settings_screen.dart';
 import 'package:meals/app/screens/tabs_screen.dart';
 import 'package:meals/app/utils/routes.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Settings settings = Settings();
+  List<Meal> _availableMeals = mockMeal;
+
+  void _filterMeals(Settings settings) {
+    setState(() {
+      this.settings = settings;
+      _availableMeals = mockMeal.where((meal) {
+        final filterGluten = settings.isGlutenFree! && !meal.isGlutenFree!;
+        final filterLactose = settings.isLactoseFree! && !meal.isLactoseFree!;
+        final filterVegan = settings.isVegan! && !meal.isVegan!;
+        final filterVegetarian = settings.isVegetarian! && !meal.isVegetarian!;
+
+        return !filterGluten &&
+            !filterLactose &&
+            !filterVegan &&
+            !filterVegetarian;
+      }).toList();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +56,13 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         RoutesConst.home: (context) => const TabsScreen(),
-        RoutesConst.categoriesMeals: (context) => const CategoriesMealsScreen(),
+        RoutesConst.categoriesMeals: (context) =>
+            CategoriesMealsScreen(meals: _availableMeals),
         RoutesConst.mealDetails: (context) => const MealDetailsScreen(),
-        RoutesConst.settings: (context) => const SettingsScreen(),
+        RoutesConst.settings: (context) => SettingsScreen(
+              settings: settings,
+              onSettingsChanged: _filterMeals,
+            ),
       },
     );
   }
