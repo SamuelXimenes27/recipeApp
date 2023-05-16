@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import '../models/meal.dart';
 
 class MealDetailsScreen extends StatelessWidget {
-  const MealDetailsScreen({super.key});
+  final Function(Meal)? onToggleFavorite;
+  final bool Function(Meal) isFavorite;
+  const MealDetailsScreen({
+    super.key,
+    required this.onToggleFavorite,
+    required this.isFavorite,
+  });
 
   Widget _createSectionTitle(BuildContext context, String title) {
     return Container(
@@ -94,9 +100,9 @@ class MealDetailsScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).pop();
+          onToggleFavorite!(meal);
         },
-        child: const Icon(Icons.star),
+        child: Icon(isFavorite(meal) ? Icons.star : Icons.star_border),
       ),
     );
   }
