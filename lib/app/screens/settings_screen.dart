@@ -41,14 +41,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Configurações'),
+        title: const Text('Settings'),
       ),
       drawer: const MainDrawer(),
       body: Column(children: [
         Container(
           padding: const EdgeInsets.all(20),
           child: Text(
-            'Configurações',
+            'Settings',
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
@@ -56,26 +56,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: ListView(
           children: [
             _createSwitch(
-              'Sem Glutén',
-              'Só exibe refeições sem glutén!',
+              'Gluten free',
+              'Only displays gluten-free meals!',
               settings!.isGlutenFree!,
               (value) => {setState(() => settings!.isGlutenFree = value)},
             ),
             _createSwitch(
-              'Sem Lactose',
-              'Só exibe refeições sem lactose!',
+              'Lactose free',
+              'Only displays lactose-free meals!',
               settings!.isLactoseFree!,
               (value) => {setState(() => settings!.isLactoseFree = value)},
             ),
             _createSwitch(
-              'Vegana',
-              'Só exibe refeições veganas!',
+              'Vegan',
+              'Only displays vegan meals!',
               settings!.isVegan!,
               (value) => {setState(() => settings!.isVegan = value)},
             ),
             _createSwitch(
-              'Vegetariana',
-              'Só exibe refeições vegetarianas!',
+              'Vegetarian',
+              'Only displays vegetarian meals!',
               settings!.isVegetarian!,
               (value) => {setState(() => settings!.isVegetarian = value)},
             ),

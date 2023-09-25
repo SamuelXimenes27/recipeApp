@@ -44,7 +44,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _createIcon(
             Icons.restaurant,
-            'Refeições',
+            'Meals',
             () => Navigator.pushReplacementNamed(
               context,
               RoutesConst.home,
@@ -52,7 +52,7 @@ class MainDrawer extends StatelessWidget {
           ),
           _createIcon(
             Icons.settings,
-            'Configurações',
+            'Settings',
             () => Navigator.pushReplacementNamed(
               context,
               RoutesConst.settings,
