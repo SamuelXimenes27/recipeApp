@@ -45,9 +45,29 @@ class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          _screens![_selectedIndexScreen!]['title'].toString(),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(40),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(100),
+              bottomRight: Radius.circular(100),
+            ),
+            color: Theme.of(context).colorScheme.primary,
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: Text(
+                _screens![_selectedIndexScreen!]['title'].toString(),
+                style: const TextStyle(
+                  fontFamily: 'PasseioTest',
+                  fontSize: 26,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
         ),
       ),
       drawer: const MainDrawer(),

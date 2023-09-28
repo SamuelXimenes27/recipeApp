@@ -13,7 +13,7 @@ class MainDrawer extends StatelessWidget {
       title: Text(
         label,
         style: const TextStyle(
-          fontFamily: 'RobotoCondensed',
+          fontFamily: 'PasseioTest',
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),
@@ -39,6 +39,7 @@ class MainDrawer extends StatelessWidget {
                 fontWeight: FontWeight.w900,
                 fontSize: 30,
                 color: Theme.of(context).colorScheme.primary,
+                fontFamily: 'PasseioTest',
               ),
             ),
           ),

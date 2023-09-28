@@ -59,14 +59,15 @@ class _MyAppState extends State<MyApp> {
           secondary: Colors.amber,
         ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
-        fontFamily: 'Raleway',
+        fontFamily: 'PasseioTest',
         textTheme: ThemeData.light().textTheme.copyWith(
               titleLarge: const TextStyle(
                 fontSize: 20,
-                fontFamily: 'RobotoCondensed',
+                fontFamily: 'PasseioTest',
               ),
               titleMedium: const TextStyle(
                 fontWeight: FontWeight.bold,
+                fontFamily: 'PasseioTest',
               ),
             ),
       ),
