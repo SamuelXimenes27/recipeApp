@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/app/components/drawer.dart';
+import 'package:meals/app/components/floating_bottom_bar.dart';
 import 'package:meals/app/screens/category_screen.dart';
 import 'package:meals/app/screens/favorite_screen.dart';
 
@@ -51,11 +52,8 @@ class _TabsScreenState extends State<TabsScreen> {
       ),
       drawer: const MainDrawer(),
       body: _screens![_selectedIndexScreen!]['screen'] as Widget,
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: FloatingBottomNavigationBar(
         onTap: _selectScreen,
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Theme.of(context).colorScheme.secondary,
         currentIndex: _selectedIndexScreen as int,
         items: const [
           BottomNavigationBarItem(
