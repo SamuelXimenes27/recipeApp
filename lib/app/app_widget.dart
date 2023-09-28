@@ -65,6 +65,9 @@ class _MyAppState extends State<MyApp> {
                 fontSize: 20,
                 fontFamily: 'RobotoCondensed',
               ),
+              titleMedium: const TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
             ),
       ),
       routes: {
