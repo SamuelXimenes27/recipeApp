@@ -4,11 +4,12 @@ import '../models/meal.dart';
 
 const mockData = [
   Category(
-      id: 'c1',
-      title: 'Italian',
-      color: Colors.purple,
-      imageUrl:
-          'https://img.freepik.com/free-vector/illustration-italy-flag_53876-27098.jpg?w=1480&t=st=1695921555~exp=1695922155~hmac=9dd500afb15f59d0234c70b96849cbca06c71ed032baa9ef1ff5f79bfaf2572f'),
+    id: 'c7',
+    title: 'Breakfast',
+    color: Colors.lightBlue,
+    imageUrl:
+        'https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=1380&t=st=1695919710~exp=1695920310~hmac=01e903c7e10c710a1ad535d99bdf34ad63a710948d1e058fea60df07e09248d3',
+  ),
   Category(
     id: 'c2',
     title: 'Fast & Simple',
@@ -23,12 +24,6 @@ const mockData = [
       imageUrl:
           'https://img.freepik.com/free-photo/flat-lay-burger-ingredients-wooden-table_23-2148235047.jpg?w=1380&t=st=1695919611~exp=1695920211~hmac=98b79e835e6b80bd5c8ba2c22bc8bc0f4833c5384af217c33bb4eee4557bd98d'),
   Category(
-      id: 'c4',
-      title: 'German',
-      color: Colors.amber,
-      imageUrl:
-          'https://img.freepik.com/free-vector/illustration-german-flag_53876-27101.jpg?w=1480&t=st=1695921603~exp=1695922203~hmac=b32c8819f29bf442b6e71a455e67398751b35a76c9aabb90ef6f4de8650094e9'),
-  Category(
     id: 'c5',
     title: 'Light & Healthy',
     color: Colors.indigo,
@@ -36,18 +31,18 @@ const mockData = [
         'https://img.freepik.com/free-photo/flat-lay-vegetables-frame-with-copy-space_23-2149271076.jpg?w=1380&t=st=1695919871~exp=1695920471~hmac=212d287213421e25affdabc1fc009c7ba41fde4f40e898dd850dd7d4a1e41a20',
   ),
   Category(
+    id: 'c10',
+    title: 'Summer',
+    color: Colors.teal,
+    imageUrl:
+        'https://img.freepik.com/free-photo/slices-fruits-ice-summer-title-glass_23-2148107849.jpg?w=1380&t=st=1695919678~exp=1695920278~hmac=eb5e2c7eb4afa6a288e5c562cbfdd7a8085e11105cbefbcba2a04ebba8ca8c7c',
+  ),
+  Category(
     id: 'c6',
     title: 'Exotic',
     color: Colors.green,
     imageUrl:
         'https://img.freepik.com/free-photo/flat-lay-arrangement-hawaiian-poke-bowl_23-2148873881.jpg?w=1380&t=st=1695919759~exp=1695920359~hmac=669d032bb4c59bf507b04321415e3f83d0309638de8cd9943c6e6f1447871f5b',
-  ),
-  Category(
-    id: 'c7',
-    title: 'Breakfast',
-    color: Colors.lightBlue,
-    imageUrl:
-        'https://img.freepik.com/free-photo/healthy-breakfast-table_144627-43540.jpg?w=1380&t=st=1695919710~exp=1695920310~hmac=01e903c7e10c710a1ad535d99bdf34ad63a710948d1e058fea60df07e09248d3',
   ),
   Category(
     id: 'c8',
@@ -64,11 +59,18 @@ const mockData = [
         'https://img.freepik.com/free-vector/illustration-france-flag_53876-27099.jpg?w=1480&t=st=1695921542~exp=1695922142~hmac=6e60e25bf8438709e03ce8e668b26d1475a5149c73fe6da51c1d5dd40c3a1770',
   ),
   Category(
-    id: 'c10',
-    title: 'Summer',
-    color: Colors.teal,
+    id: 'c4',
+    title: 'German',
+    color: Colors.amber,
     imageUrl:
-        'https://img.freepik.com/free-photo/slices-fruits-ice-summer-title-glass_23-2148107849.jpg?w=1380&t=st=1695919678~exp=1695920278~hmac=eb5e2c7eb4afa6a288e5c562cbfdd7a8085e11105cbefbcba2a04ebba8ca8c7c',
+        'https://img.freepik.com/free-vector/illustration-german-flag_53876-27101.jpg?w=1480&t=st=1695921603~exp=1695922203~hmac=b32c8819f29bf442b6e71a455e67398751b35a76c9aabb90ef6f4de8650094e9',
+  ),
+  Category(
+    id: 'c1',
+    title: 'Italian',
+    color: Colors.purple,
+    imageUrl:
+        'https://img.freepik.com/free-vector/illustration-italy-flag_53876-27098.jpg?w=1480&t=st=1695921555~exp=1695922155~hmac=9dd500afb15f59d0234c70b96849cbca06c71ed032baa9ef1ff5f79bfaf2572f',
   ),
 ];
 

@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   Settings settings = Settings();
   List<Meal> _availableMeals = mockMeal;
-  List<Meal> _favoriteMeals = [];
+  final List<Meal> _favoriteMeals = [];
 
   void _filterMeals(Settings settings) {
     setState(() {
@@ -59,15 +59,14 @@ class _MyAppState extends State<MyApp> {
           secondary: Colors.amber,
         ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
-        fontFamily: 'PasseioTest',
+        fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               titleLarge: const TextStyle(
                 fontSize: 20,
-                fontFamily: 'PasseioTest',
+                fontFamily: 'RobotoCondensed',
               ),
               titleMedium: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontFamily: 'PasseioTest',
               ),
             ),
       ),

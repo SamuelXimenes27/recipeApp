@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:meals/app/components/drawer.dart';
 import 'package:meals/app/components/floating_bottom_bar.dart';
 import 'package:meals/app/screens/category_screen.dart';
 import 'package:meals/app/screens/favorite_screen.dart';
+import 'package:meals/app/screens/settings_screen.dart';
 
 import '../models/meal.dart';
+import '../models/settings.dart';
 
 class TabsScreen extends StatefulWidget {
   final List<Meal> favoriteMeals;
@@ -20,6 +21,13 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   int? _selectedIndexScreen = 0;
   List<Map<String, Object>>? _screens;
+  Settings settings = Settings();
+
+  void _filterMeals(Settings settings) {
+    setState(() {
+      this.settings = settings;
+    });
+  }
 
   @override
   void initState() {
@@ -32,6 +40,13 @@ class _TabsScreenState extends State<TabsScreen> {
       {
         'title': 'My Favourites',
         'screen': FavoriteScreen(favoriteMeals: widget.favoriteMeals),
+      },
+      {
+        'title': 'Settings',
+        'screen': SettingsScreen(
+          settings: settings,
+          onSettingsChanged: _filterMeals,
+        ),
       }
     ];
   }
@@ -61,16 +76,15 @@ class _TabsScreenState extends State<TabsScreen> {
               child: Text(
                 _screens![_selectedIndexScreen!]['title'].toString(),
                 style: const TextStyle(
-                  fontFamily: 'PasseioTest',
                   fontSize: 26,
                   fontWeight: FontWeight.w600,
+                  color: Colors.white,
                 ),
               ),
             ),
           ),
         ),
       ),
-      drawer: const MainDrawer(),
       body: _screens![_selectedIndexScreen!]['screen'] as Widget,
       bottomNavigationBar: FloatingBottomNavigationBar(
         onTap: _selectScreen,
@@ -83,6 +97,10 @@ class _TabsScreenState extends State<TabsScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
             label: 'Favourites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
       ),

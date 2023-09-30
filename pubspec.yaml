@@ -14,6 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   cached_network_image: ^3.3.0
   path_provider: ^2.1.1
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
@@ -45,9 +46,3 @@ flutter:
         - asset: assets/fonts/RobotoCondensed-Light.ttf
         - asset: assets/fonts/RobotoCondensed-Regular.ttf
           style: italic
-    - family: PasseioTest
-      fonts:
-        - asset: assets/fonts/PasseioTest-Bold-BF650912be46612.ttf
-        - asset: assets/fonts/PasseioTest-ExtraLight-BF650912becd2da.ttf
-        - asset: assets/fonts/PasseioTest-Light-BF650912bcbdda9.ttf
-        - asset: assets/fonts/PasseioTest-Regular-BF650912bd977ab.ttf

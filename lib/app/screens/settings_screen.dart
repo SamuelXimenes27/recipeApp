@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meals/app/components/drawer.dart';
 import 'package:meals/app/models/settings.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -40,18 +39,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Settings'),
-      ),
-      drawer: const MainDrawer(),
       body: Column(children: [
-        Container(
-          padding: const EdgeInsets.all(20),
-          child: Text(
-            'Settings',
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-        ),
         Expanded(
             child: ListView(
           children: [
